@@ -1,0 +1,135 @@
+---
+import Container from "@components/container.astro";
+import Hero from "@components/hero.astro";
+import Layout from "@layouts/Layout.astro";
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+const faqs = [
+	{
+		title: "How to Download TikTok sounds and videos for free?",
+		description: `For users who want to download TikTok mp3 sounds from videos, and remove the watermark, we have developed the simplest and most convenient solution. To download a download TikTok songs without the watermark, just paste the link into the input field and click the "Download" button.`,
+	},
+	{
+		title: "How to Download TikTok MP3 using our website?",
+		description: `For users who want to download TikTok mp3 sounds from videos, and remove the watermark, we have developed the simplest and most convenient solution. To download a download TikTok songs without the watermark, just paste the link into the input field and click the "Download" button.
+`,
+	},
+];
+---
+
+<Layout title="Tikloader Downloader title" description="TikLoader is the best downloader">
+	<Container>
+		<Hero heading="TikTok MP3 Downloader" subheading="Download TikTok MP3 or Sound for free"/>
+		<div class="content">
+			<div class="relative mx-auto px-4 lg:px-8 my-10 max-w-screen-2xl">
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">TikTok Sound Downloader: Easy and Fast Solution</h2>
+				<p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+					TikTok is known for its catchy and trendy sounds that add a unique touch to videos. Sometimes, you might want to download these sounds to use as ringtones, background music, or for your own creative projects. Here, we’ll discuss an easy and fast TikTok sound downloader tool that will meet all your needs.
+				</p>
+			
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">What is a TikTok Sound Downloader?</h2>
+				<p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+					A TikTok sound downloader is a tool that lets you download sounds from TikTok directly to your device. You don’t need any extra software or app to use it.
+				</p>
+			
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Features You'll Like:</h2>
+				<ul class="list-disc ml-6">
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Simple and User-Friendly Interface:</strong> It’s very easy to use. Just copy the sound URL and click the download button.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>High-Quality Downloads:</strong> The sound quality remains the same as the original.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>No Watermark:</strong> You can download sounds without any watermark, so they sound clean and professional.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Fast Download Speed:</strong> The download speed is fast, giving you quick results.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Works on All Devices:</strong> This tool works on any device and browser, whether you're using a PC, Mac, or mobile device.</p>
+					</li>
+				</ul>
+			
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">How to Use It:</h2>
+				<ol class="list-decimal ml-6">
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Copy the Sound URL:</strong> Go to TikTok, find the sound you want to download, and copy its URL.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Paste the URL:</strong> Open the TikTok sound downloader tool in your browser and paste the URL.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Click the Download Button:</strong> After pasting the URL, click the download button and the sound will start downloading.</p>
+					</li>
+					<li>
+						<p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Enjoy Your Sound:</strong> Once the download is complete, you can use the sound on your device for your projects or as a ringtone.</p>
+					</li>
+				</ol>
+			
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Conclusion</h2>
+				<p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+					A TikTok sound downloader is a handy tool that allows you to easily download TikTok sounds. It lets you enjoy your favorite background music or sounds offline and use them in your own creative projects without any hassle. This tool saves you time and provides a smooth experience.
+				</p>
+			
+				<h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Note:</h2>
+				<p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+				TikTok is not affiliated with TikTok or ByteDance Ltd. We only support TikTok users in downloading TikTok sounds without any trouble. If you have problems with other sound downloaders, try our TikTok sound downloader. We are constantly updating to make it easy for users to download TikTok sounds. Thank you!
+				</p>
+			</div>
+            
+		</div>
+		<div class="fag">
+			<div class="mx-auto max-w-screen-2xl px-6 py-10 dark:bg-gray-800">
+				<div class="mx-auto divide-y divide-gray-300 dark:divide-gray-700">
+					<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">FAQ</h2>
+					<dl class="mt-10 space-y-6 divide-y divide-gray-300 dark:divide-gray-700">
+						{
+							faqs.map((faq, index) => (
+								<div class="pt-6" x-data="{ open: false }">
+									<dt>
+										<button
+											type="button"
+											class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+											@click="open = !open"
+											:aria-expanded="open.toString()"
+											:class="{'bg-gray-100 dark:bg-gray-800': open}">
+											<span class="text-base font-semibold leading-7" :class="{'text-indigo-100': open}">{faq.title}</span>
+											<span class="ml-6 flex h-7 items-center">
+												<svg
+													class="h-6 w-6 transform transition-transform"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke-width="1.5"
+													stroke="currentColor"
+													aria-hidden="true"
+													:class="{'rotate-180': open}">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+												</svg>
+											</span>
+										</button>
+									</dt>
+									<dd
+										x-transition:enter="transition ease-out duration-150"
+										x-transition:enter-start="opacity-0 transform scale-95"
+										x-transition:enter-end="opacity-100 transform scale-100"
+										x-transition:leave="transition ease-in duration-150"
+										x-transition:leave-start="opacity-100 transform scale-100"
+										x-transition:leave-end="opacity-0 transform scale-95"
+										class="mt-2 pr-12"
+										x-show="open">
+										<span class="text-base leading-7 text-gray-600 dark:text-gray-300">
+											<span set:html={faq.description}></span>
+										</span>
+									</dd>
+								</div>
+							))
+						}
+					</dl>
+				</div>
+				
+			</div>
+		</div>
+		</Container>
+</Layout>

@@ -1,0 +1,136 @@
+---
+import Container from "@components/container.astro";
+import Hero from "@components/hero.astro";
+import Layout from "@layouts/Layout.astro";
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+const faqs = [
+	{
+		title: "Is it illegal to download TikTok stories?",
+		description: `You can download but you may not use TT story video to re-upload without permission.`,
+	},
+	{
+		title: "Can i save story videos from TikTok on iPhone/iPad?",
+		description: `Yes you can. Open the TikTok app and go to the TikTok profile with the story video you want to download. Tap on the profile picture and select "Copy Link" to get the story video link. On iOS devices, it is recommended that you update your OS to the latest version to download TikTok stories without errors.`,
+	},
+];
+---
+
+<Layout title="Tikloader Downloader title" description="TikLoader is the best downloader">
+	<Container>
+		<Hero heading="Download TikTok Stories" subheading="Download TikTok stories without watermarks"/>
+		<div class="content">
+			<div class="relative mx-auto px-4 lg:px-8 my-10 max-w-screen-2xl">
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Story Downloader: Easy and Efficient Solution</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    Stories are a popular feature on many social media platforms, allowing users to share short-lived updates with their audience. Sometimes, you may want to download these stories for offline viewing or archiving. Here, we’ll discuss an easy and efficient story downloader tool that will help you save stories quickly and conveniently.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">What is a Story Downloader?</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    A story downloader is a tool that lets you download stories from social media platforms directly to your device. Instead of saving each story manually, this tool simplifies the process and lets you download stories with ease.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Features You'll Like:</h2>
+                <ul class="list-disc ml-6">
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Simple and User-Friendly Interface:</strong> The interface is designed to be straightforward. Just enter the story URL and click the download button.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>High-Quality Downloads:</strong> Stories are downloaded in their original quality, so you don’t miss any details.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>No Watermark:</strong> You can download stories without any watermark, making them look clean and professional.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Fast Download Speed:</strong> The download process is quick, allowing you to get your stories swiftly.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Works on All Devices:</strong> The tool works across different devices and browsers, whether you’re using a PC, Mac, or mobile device.</p>
+                    </li>
+                </ul>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">How to Use It:</h2>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Find the Story:</strong> Go to the social media platform and locate the story you wish to download.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Copy the Story URL:</strong> Copy the URL of the story you want to save.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Paste the URL:</strong> Open the story downloader tool in your browser and paste the URL into the provided field.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Click the Download Button:</strong> After pasting the URL, click the download button to start the download process.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Enjoy Your Story:</strong> Once the download is complete, you can view the story offline on your device.</p>
+                    </li>
+                </ol>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Conclusion</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    A story downloader is a valuable tool for easily saving stories from social media platforms. It simplifies the process of saving stories, allowing you to enjoy and archive them without hassle. This tool provides a smooth and efficient experience for obtaining your favorite stories.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Note:</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    This tool is not affiliated with any specific social media platforms. We offer a service to help users download stories conveniently. If you encounter issues with other story downloaders, try our story downloader. We are continuously updating our tool to enhance its functionality and user experience. Thank you!
+                </p>
+            </div>                     
+		</div>
+		<div class="fag">
+			<div class="mx-auto max-w-screen-2xl px-6 py-10 dark:bg-gray-800">
+				<div class="mx-auto divide-y divide-gray-300 dark:divide-gray-700">
+					<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">FAQ</h2>
+					<dl class="mt-10 space-y-6 divide-y divide-gray-300 dark:divide-gray-700">
+						{
+							faqs.map((faq, index) => (
+								<div class="pt-6" x-data="{ open: false }">
+									<dt>
+										<button
+											type="button"
+											class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+											@click="open = !open"
+											:aria-expanded="open.toString()"
+											:class="{'bg-gray-100 dark:bg-gray-800': open}">
+											<span class="text-base font-semibold leading-7" :class="{'text-indigo-100': open}">{faq.title}</span>
+											<span class="ml-6 flex h-7 items-center">
+												<svg
+													class="h-6 w-6 transform transition-transform"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke-width="1.5"
+													stroke="currentColor"
+													aria-hidden="true"
+													:class="{'rotate-180': open}">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+												</svg>
+											</span>
+										</button>
+									</dt>
+									<dd
+										x-transition:enter="transition ease-out duration-150"
+										x-transition:enter-start="opacity-0 transform scale-95"
+										x-transition:enter-end="opacity-100 transform scale-100"
+										x-transition:leave="transition ease-in duration-150"
+										x-transition:leave-start="opacity-100 transform scale-100"
+										x-transition:leave-end="opacity-0 transform scale-95"
+										class="mt-2 pr-12"
+										x-show="open">
+										<span class="text-base leading-7 text-gray-600 dark:text-gray-300">
+											<span set:html={faq.description}></span>
+										</span>
+									</dd>
+								</div>
+							))
+						}
+					</dl>
+				</div>
+				
+			</div>
+		</div>
+		</Container>
+</Layout>

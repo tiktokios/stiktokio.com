@@ -1,0 +1,44 @@
+---
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<Layout title="Tikloader Downloader title" description="TikLoader is the best downloader">
+	<Container>
+		<div class="content">
+            <div class="relative mx-auto px-4 lg:px-8 my-10 max-w-screen-2xl">
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">About Us</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    Welcome to our platform, where we provide a comprehensive suite of tools designed to help you download and enjoy content from popular social media platforms. Our primary goal is to offer an easy and efficient way to download TikTok and Douyin videos, stories, and photos, as well as convert TikTok slideshows into single images.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Features You'll Like:</h2>            
+                <ul class="list-disc ml-6 mb-4">
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>TikTok Video Downloader:</strong> Download your favorite TikTok videos quickly and easily. Save videos in high quality without watermarks for offline viewing or sharing.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>TikTok Story Downloader:</strong> Capture and download TikTok stories that you want to keep or use in your own projects.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>TikTok Photo and Slideshow Converter:</strong> Convert TikTok slideshows into single images for easy saving and use. Download individual photos from TikTok as well.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Douyin Video and Story Downloader:</strong> Similar to our TikTok tools, download Douyin videos and stories seamlessly. Enjoy your favorite Douyin content offline with high quality.</p>
+                    </li>
+                </ul>
+            
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    We are committed to providing a smooth and user-friendly experience. Our tools are designed to be simple, fast, and effective, ensuring that you can get the content you want with minimal hassle. Whether you’re looking to save videos, stories, or photos, our platform is here to help.
+                </p>
+            
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    <strong>Thank you for choosing our services!</strong> We are continuously working to improve our tools and expand our offerings to better meet your needs. If you have any questions or feedback, please feel free to contact us.
+                </p>
+            </div>           
+		</div>
+		</Container>
+</Layout>

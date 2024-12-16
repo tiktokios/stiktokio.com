@@ -1,0 +1,160 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { pwaInfo } from 'virtual:pwa-info';
+import Footer from '@components/footer.astro';
+import Navbar from '@components/navbar/navbar.astro';
+import '@fontsource-variable/inter';
+import { HeadHrefLangs } from 'astro-i18next/components';
+import { SEO } from 'astro-seo';
+import i18next from 'i18next';
+
+export interface Props {
+    title?: string;
+    lang?: string;
+    description?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const { title, description, lang = null } = Astro.props;
+
+const makeTitle = title ? `${title}` : 'Astros - Starter Template for Astro with Tailwind CSS';
+---
+
+<!doctype html>
+<html lang={lang ?? i18next.language}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="theme-color" content="#ffffff" />
+          <meta name="robots" content="noindex">
+
+        <HeadHrefLangs />
+
+        <ViewTransitions />
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="/index.css" />
+
+        <SEO title={makeTitle} description={description} canonical={canonicalURL} />
+
+        <script is:inline>
+            function handleThemeChange() {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+            handleThemeChange();
+            document.removeEventListener('astro:after-swap', handleThemeChange);
+            document.addEventListener('astro:after-swap', handleThemeChange);
+        </script>
+
+        {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+        <script src="/src/pwa.ts"></script>
+    </head>
+    <body class="dark:bg-gray-900">
+        <Navbar />
+        <slot />
+        <Footer />
+        <style is:global>
+            /* Improve Page speed */
+            /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+            img {
+                content-visibility: auto;
+            }
+        </style>
+    </body>
+</html>
+<style is:global>
+  @media (min-width: 768px) {
+    .app-box .app-box__info {
+      text-align: left;
+    }
+  }
+  .app-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .app-box .app-box__info {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .app-box {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 24px;
+      gap: 64px;
+      margin-top: 84px;
+    }
+  }
+  .app-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 16px;
+    background: linear-gradient(167.7deg, #e6e2f4 0, #f4e2ed 100.38%);
+    border-radius: 12px;
+    margin-top: 28px;
+  }
+  .btn-accordion {
+    background: linear-gradient(90deg, #a982ba 0, #e27855 100%);
+  }
+  .hero-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 0; */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    width: 100%;
+  }
+  .downloader {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 24px 16px 60px;
+    gap: 15px;
+    color: #000;
+    background: linear-gradient(318deg, #0348dd 2.03%, #8142f5 48.63%, #ee4dd4 96.22%);
+  }
+  li {
+    list-style: none !important;
+  }
+  .hero-tools .tool-item:first-child {
+    border-left: none;
+  }
+  @media (min-width: 768px) {
+    .hero-tools .tool-item {
+      width: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .hero-tools .tool-item {
+    flex-direction: row;
+    padding: 8px;
+    gap: 8px;
+    width: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  @media (min-width: 768px) {
+    .downloader .hero-heading {
+      margin-top: 0.5rem;
+    }
+  }
+  .downloader .hero-heading {
+    text-align: center;
+  }
+
+</style>
+

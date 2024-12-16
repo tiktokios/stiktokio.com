@@ -1,0 +1,53 @@
+---
+import Container from "@components/container.astro";
+import Hero from "@components/hero.astro";
+import Layout from "@layouts/Layout.astro";
+import Features from "@components/features.astro";
+import Newsletter from "@components/newsletter.astro";
+import Testimonials from "@components/testimonials.astro";
+
+import Faq from "@components/faq.astro";
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+const faqs = [
+	{
+		title: "How to Download video Tiktok no watermark?",
+		description: `Open Tik Tok app on your phone/or Web on your browser.
+Choose whatever video you want to download.
+Click to the Share button at the right bottom.
+Click the Copy Link button.
+Go back to webname.com and paste your download link to the field above then click to the Download button.
+Wait for our server to do its job and then, save the video to your device.`,
+	},
+	{
+		title: "How to get the TikTok video download link?",
+		description: `Open your TikTok application
+Choose the TikTok video that you want to download
+Click Share and at the Share options, find Copy Link button
+Your download URL is ready on the clipboard.
+For example, the link would look like this
+https://v.douyin.com/3vn57r/
+or
+https://www.tiktok.com/@philandmore/video/6805867805452324102
+or
+https://m.tiktok.com/v/6805867805452324102.html
+and more...`,
+	},
+];
+---
+
+<Layout>
+	<Container>
+		<Hero />
+		<Features />
+		<Newsletter />
+		<Testimonials />
+
+		<Faq />
+		
+	</Container>
+</Layout>
+
+
+

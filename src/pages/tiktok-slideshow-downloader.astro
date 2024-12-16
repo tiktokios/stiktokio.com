@@ -1,0 +1,134 @@
+---
+import Container from "@components/container.astro";
+import Hero from "@components/hero.astro";
+import Layout from "@layouts/Layout.astro";
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+const faqs = [
+	{
+		title: "How to Download from a TikTok photo slideshow?",
+		description: `Simply follow our guide above on all devices. First, find the slideshow on TikTok and get the link. Second, open websitename.com on phone, PC or desktop. Third, paste the link on websitename.com and click Download.`,
+	},
+	{
+		title: "Will Individual TikTok slideshow photos have their watermarks removed?",
+		description: `Simply follow our guide above on all devices. First, find the slideshow on TikTok and get the link. Second, open websitename.com on phone, PC or desktop. Third, paste the link on websitename.com and click Download.
+`,
+	},
+];
+---
+
+<Layout title="Tikloader Downloader title" description="TikLoader is the best downloader">
+	<Container>
+		<Hero heading="TikTok Slideshow Downloader" subheading="Download TikTok photos slideshow and images without watermarks"/>
+		<div class="content">
+			<div class="relative mx-auto px-4 lg:px-8 my-10 max-w-screen-2xl">
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Slideshow Photo Downloader: Easy and Convenient Solution</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    Slideshows are a great way to showcase a series of photos in a visually appealing manner. Sometimes, you might want to download these individual photos from a slideshow for personal use or to share them with others. Here, we’ll discuss an easy and convenient slideshow photo downloader tool that will meet all your needs.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">What is a Slideshow Photo Downloader?</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    A slideshow photo downloader is a tool that allows you to download individual photos from a slideshow directly to your device. Instead of downloading the entire slideshow, this tool lets you download each image separately with a unique download link.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Features You'll Like:</h2>
+                <ul class="list-disc ml-6">
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Simple and User-Friendly Interface:</strong> The interface is designed to be intuitive. Just click on the download link for each photo you want to save.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>High-Quality Downloads:</strong> Each image is downloaded in its original quality, ensuring that you get the best resolution possible.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Separate Download Links:</strong> Every photo in the slideshow has its own download link, making it easy to save specific images without downloading the entire slideshow.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Fast Download Speed:</strong> The download process is quick, providing you with the images you need in no time.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Works on All Devices:</strong> This tool is compatible with any device and browser, whether you're using a PC, Mac, or mobile device.</p>
+                    </li>
+                </ul>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">How to Use It:</h2>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Find the Slideshow:</strong> Go to the slideshow from which you want to download photos.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Access the Download Links:</strong> Open the slideshow photo downloader tool in your browser to see the list of images with their respective download links.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Click the Download Links:</strong> Click on the download link for each photo you want to save. Each link will start downloading the respective image.</p>
+                    </li>
+                    <li>
+                        <p class="text-base leading-8 text-gray-900 dark:text-gray-100"><strong>Enjoy Your Photos:</strong> Once the download is complete, you can view and use the images on your device as you like.</p>
+                    </li>
+                </ol>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Conclusion</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    A slideshow photo downloader is a handy tool that allows you to easily download individual photos from a slideshow. It gives you the flexibility to save specific images without having to download the entire slideshow. This tool provides a smooth and efficient experience for obtaining your favorite photos.
+                </p>
+            
+                <h2 class="font-semibold text-2xl leading-tight text-black dark:text-white mt-10 mb-2">Note:</h2>
+                <p class="text-base leading-8 text-gray-900 dark:text-gray-100 mb-10">
+                    This tool is not affiliated with any specific slideshow platforms. We offer a service to help users download images from slideshows easily. If you encounter any issues with other photo downloaders, try our slideshow photo downloader. We are continually updating our tool to ensure it meets your needs effectively. Thank you!
+                </p>
+            </div>            
+		</div>
+		<div class="fag">
+			<div class="mx-auto max-w-screen-2xl px-6 py-10 dark:bg-gray-800">
+				<div class="mx-auto divide-y divide-gray-300 dark:divide-gray-700">
+					<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">FAQ</h2>
+					<dl class="mt-10 space-y-6 divide-y divide-gray-300 dark:divide-gray-700">
+						{
+							faqs.map((faq, index) => (
+								<div class="pt-6" x-data="{ open: false }">
+									<dt>
+										<button
+											type="button"
+											class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+											@click="open = !open"
+											:aria-expanded="open.toString()"
+											:class="{'bg-gray-100 dark:bg-gray-800': open}">
+											<span class="text-base font-semibold leading-7" :class="{'text-indigo-100': open}">{faq.title}</span>
+											<span class="ml-6 flex h-7 items-center">
+												<svg
+													class="h-6 w-6 transform transition-transform"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke-width="1.5"
+													stroke="currentColor"
+													aria-hidden="true"
+													:class="{'rotate-180': open}">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+												</svg>
+											</span>
+										</button>
+									</dt>
+									<dd
+										x-transition:enter="transition ease-out duration-150"
+										x-transition:enter-start="opacity-0 transform scale-95"
+										x-transition:enter-end="opacity-100 transform scale-100"
+										x-transition:leave="transition ease-in duration-150"
+										x-transition:leave-start="opacity-100 transform scale-100"
+										x-transition:leave-end="opacity-0 transform scale-95"
+										class="mt-2 pr-12"
+										x-show="open">
+										<span class="text-base leading-7 text-gray-600 dark:text-gray-300">
+											<span set:html={faq.description}></span>
+										</span>
+									</dd>
+								</div>
+							))
+						}
+					</dl>
+				</div>
+				
+			</div>
+		</div>
+		</Container>
+</Layout>
