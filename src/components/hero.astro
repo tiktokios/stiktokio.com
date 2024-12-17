@@ -14,6 +14,16 @@ const { heading, subheading } = Astro.props;
             <p class="mt-2 text-lg leading-8 text-gray-300">{subheading}</p>
         </div>
 
+        <div class="pageTunerWrapper">
+            <div class="pageTunerWrapper__items">
+                <div class="pageTunerWrapper__item"><p><img src="/img/form/index.svg" alt="Video" width="18" height="18" loading="lazy"><span>Video</span></p></div>
+                <div class="pageTunerWrapper__item"><a href="https://igram.world/photo" data-gtag-click="top_panel_photo_click"><img src="/img/form/photo.svg" alt="Photo" width="18" height="18" loading="lazy"><span>Photo</span></a></div>
+                <div class="pageTunerWrapper__item"><a href="https://igram.world/story-saver" data-gtag-click="top_panel_story_click"><img src="/img/form/story-saver.svg" alt="Story" width="18" height="18" loading="lazy"><span>Story</span></a></div>
+                <div class="pageTunerWrapper__item"><a href="https://igram.world/reels-downloader" data-gtag-click="top_panel_reels_click"><img src="/img/form/reels-downloader.svg" alt="Reels" width="18" height="18" loading="lazy"><span>Reels</span></a></div>
+                <div class="pageTunerWrapper__item"><a href="https://igram.world/igtv" data-gtag-click="top_panel_igtv_click"><img src="/img/form/igtv.svg" alt="IGTV" width="18" height="18" loading="lazy"><span>IGTV</span></a></div>
+            </div>
+        </div>
+
         <div class="tab-menu">
             <button class="tablinks active" onclick="if (!window.__cfRLUnblockHandlers) return false; click_tab(event,&quot;video&quot;)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
