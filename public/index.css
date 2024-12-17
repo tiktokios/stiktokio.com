@@ -185,3 +185,6 @@ a:-webkit-any-link {
     text-decoration: none;
     transition: all .7s ease;
 }
+.pageTunerWrapper__item:not(:first-child) {
+    border-left: 1px solid hsla(0, 0%, 100%, .2);
+}
