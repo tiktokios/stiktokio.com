@@ -150,17 +150,17 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: underline;
 }
-.img {
+img {
     border-style: none;
 }
 
-.img[Attributes Style] {
+img[Attributes Style] {
     width: 18px;
     aspect-ratio: auto 18 / 18;
     height: 18px;
 }
 user agent stylesheet
-.img {
+img {
     overflow-clip-margin: content-box;
     overflow: clip;
 }
@@ -168,4 +168,10 @@ user agent stylesheet
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
+}
+.pageTunerWrapper__item a span, .pageTunerWrapper__item p span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
