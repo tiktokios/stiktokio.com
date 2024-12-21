@@ -8,10 +8,22 @@ import astroI18next from "astro-i18next";
 import alpinejs from "@astrojs/alpinejs";
 import AstroPWA from "@vite-pwa/astro";
 import icon from "astro-icon";
+import solidJs from "@astrojs/solid-js";
+
+import vercel from '@astrojs/vercel/serverless';
+
+export default defineConfig({
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
+});
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astros.zank.studio",
+	site: "https://stiktokio.com",
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
