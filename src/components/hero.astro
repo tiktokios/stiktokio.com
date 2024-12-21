@@ -4,8 +4,6 @@ import CSS from '@public/index.css';
 const { heading, subheading } = Astro.props;
 import { Image } from "astro:assets";
 import Cobe from "@components/cobe.astro";
-import { changeLanguage } from "i18next";
-import { t } from "i18next";
 const { dynamic = false } = Astro.props;
 
 changeLanguage("en");
@@ -18,8 +16,8 @@ changeLanguage("en");
     <div class="mx-auto max-w-screen-xl another">
        
         <div class="text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-white">{t("heading")}</h1>
-            <p class="mt-2 text-lg leading-8 text-gray-300">{t("subheading")}</p>
+            <h1 class="text-4xl font-bold tracking-tight text-white">{heading}</h1>
+            <p class="mt-2 text-lg leading-8 text-gray-300">{subheading}</p>
         </div>
 
         <div class="pageTunerWrapper">
