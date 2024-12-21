@@ -1,13 +1,20 @@
 {
 	"hero": {
-		"title": "Supercharged web development!",
-		"subtitle": "Unleashing the Power of the Web: Combines Astro, Tailwind CSS and Alpine.js to Streamline Your Web Development Process.",
-		"globe_title": "Craft Stunning, High-Performance Websites with Ease and Speed",
-		"main_button_text": "Download on github",
-		"secondary_button_text": "Go to animated version"
+		"title": "Tiktokio - TikTok Downloader",
+		"subtitle": "Tiktok video downloader - Download TikTok Video Without Watermark",
+		
 	},
-	"hero_animated": {
-		"secondary_button_text": "Go to base version"
+	"hero_story": {
+		"title": "Tiktokio - TikTok Stor Downloader",
+		"subtitle": "Download TikTok Story - download tiktok video Without Watermark"
+	},
+	"hero_photo": {
+		"title": "Tiktokio - TikTok Photo Downloader",
+		"subtitle": "Download TikTok Photo - Tiktok downloader no watermark"
+	},
+	"hero_mp3": {
+		"title": "Tiktokio - Tiktok Audio Downloader",
+		"subtitle": "Tiktok Mp3 Download - Tiktok Downloader without watermark"
 	},
 	"header": {
 		"features": "Features",
