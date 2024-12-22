@@ -95,6 +95,7 @@
 }
 * {
   box-sizing: border-box;
+  word-wrap: break-word !important;
 }
 user agent stylesheet div {
   display: block;
@@ -128,14 +129,12 @@ a:-webkit-any-link {
   cursor: pointer;
   text-decoration: underline;
 }
-a{
-    text-decoration: none !important;
+a {
+  text-decoration: none !important;
 }
 img {
   border-style: none;
 }
-
-
 
 user agent stylesheet img {
   overflow-clip-margin: content-box;
