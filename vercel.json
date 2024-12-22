@@ -1,9 +1,16 @@
 {
   "redirects": [
     {
-      "source": "/(404)",
-      "destination": "/",
-      "permanent": false
+      "source": "/(.*)",          // Catch all routes
+      "destination": "/",         // Redirect to home
+      "statusCode": 307,          // Temporary redirect
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-status",
+          "value": "404"          // Only apply for 404 responses
+        }
+      ]
     }
   ]
 }
