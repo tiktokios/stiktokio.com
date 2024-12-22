@@ -1,72 +1,95 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import { pwaInfo } from 'virtual:pwa-info';
-import Footer from '@components/footer.astro';
-import Navbar from '@components/navbar/navbar.astro';
-import '@fontsource-variable/inter';
-import { HeadHrefLangs } from 'astro-i18next/components';
-import { SEO } from 'astro-seo';
-import i18next from 'i18next';
+import { ViewTransitions } from "astro:transitions";
+import { pwaInfo } from "virtual:pwa-info";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { SEO } from "astro-seo";
+import i18next from "i18next";
 
 export interface Props {
-    title?: string;
-    lang?: string;
-    description?: string;
+  title?: string;
+  lang?: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const { title, description, lang = null } = Astro.props;
 
-const makeTitle = title ? `${title}` : 'Astros - Starter Template for Astro with Tailwind CSS';
+const makeTitle = title
+  ? `${title}`
+  : "";
 ---
 
 <!doctype html>
 <html lang={lang ?? i18next.language}>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="robots" content="noindex">
-        
-        <HeadHrefLangs />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      href="/images/cropped-cropped-ico-32x32.webp"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="/images/cropped-cropped-ico-192x192.webp"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/images/cropped-cropped-ico-180x180.webp"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="/images/cropped-cropped-ico-270x270.webp"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="noindex" />
 
-        <ViewTransitions />
+    <HeadHrefLangs />
 
-        <!-- Global CSS -->
-        <link rel="stylesheet" href="/index.css" />
+    <ViewTransitions />
 
-        <SEO title={makeTitle} description={description} canonical={canonicalURL} />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/index.css" />
 
-        <script is:inline>
-            function handleThemeChange() {
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-            }
-            handleThemeChange();
-            document.removeEventListener('astro:after-swap', handleThemeChange);
-            document.addEventListener('astro:after-swap', handleThemeChange);
-        </script>
+    <SEO title={makeTitle} description={description} canonical={canonicalURL} />
 
-        {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
-        <script src="/src/pwa.ts"></script>
-    </head>
-    <body class="dark:bg-gray-900">
-        <Navbar />
-        <slot />
-        <Footer />
-        <style is:global>
-            /* Improve Page speed */
-            /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-            img {
-                content-visibility: auto;
-            }
-        </style>
-    </body>
+    <script is:inline>
+      function handleThemeChange() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      handleThemeChange();
+      document.removeEventListener("astro:after-swap", handleThemeChange);
+      document.addEventListener("astro:after-swap", handleThemeChange);
+    </script>
+
+    {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+    <script src="/src/pwa.ts"></script>
+  </head>
+  <body class="white">
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
 </html>
 <style is:global>
   @media (min-width: 768px) {
@@ -120,7 +143,12 @@ const makeTitle = title ? `${title}` : 'Astros - Starter Template for Astro with
     padding: 24px 16px 60px;
     gap: 15px;
     color: #000;
-    background: linear-gradient(318deg, #0348dd 2.03%, #8142f5 48.63%, #ee4dd4 96.22%);
+    background: linear-gradient(
+      318deg,
+      #0348dd 2.03%,
+      #8142f5 48.63%,
+      #ee4dd4 96.22%
+    );
   }
   li {
     list-style: none !important;
@@ -155,6 +183,4 @@ const makeTitle = title ? `${title}` : 'Astros - Starter Template for Astro with
   .downloader .hero-heading {
     text-align: center;
   }
-
 </style>
-

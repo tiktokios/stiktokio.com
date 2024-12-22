@@ -8,58 +8,86 @@ import { changeLanguage } from "i18next";
 changeLanguage("en");
 
 const contacts = [
-	{
-		title: "Email",
-		email: "test@yourcompany.com",
-	},
-	{
-		title: "Phone",
-		phone: "+1 (555) 555-5555",
-	},
+  {
+    title: "Email",
+    email: "test@yourcompany.com",
+  },
+  {
+    title: "Phone",
+    phone: "+1 (555) 555-5555",
+  },
 ];
 ---
 
-<Layout title="Tikloader Downloader title" description="TikLoader is the best downloader">
-	<Container>
-		<Sectionhead>
-			<Fragment slot="title">Contact</Fragment>
-			<Fragment slot="desc">Have questions or need support? We're here to help!</Fragment>
-		</Sectionhead>
+<Layout
+  title="Tikloader Downloader title"
+  description="TikLoader is the best downloader"
+>
+  <Container>
+    <div class="content my-10">
+      <div class="relative p-4">
+        <div class="max-w-screen-xl mx-auto">
+          <div
+            class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal"
+          >
+            <div class="">
+              <h2 class="text-gray-900 font-bold text-4xl">
+                Portrait Photography In Early Days
+              </h2>
+              <br />
+              <hr />
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
 
-		<div class="py-24 sm:py-32">
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
-					<div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-						<div>
-							<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Departments</h2>
-							<p class="mt-4 leading-7 text-gray-600 dark:text-gray-200">Connect with our specialized teams for prompt assistance.</p>
-						</div>
-						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-							{
-								contacts.map((item) => (
-									<div class="rounded-2xl bg-gray-50 dark:bg-stone-800 p-10">
-										<h3 class="text-base font-semibold leading-7 text-gray-900 dark:text-white">{item.title}</h3>
-										<dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600 dark:text-white">
-											<div>
-												<dt class="sr-only">Email</dt>
-												<dd>
-													<a class="font-semibold text-stone-600 dark:text-white" href="mailto:collaborate@example.com">
-														{item.email}
-													</a>
-												</dd>
-											</div>
-											<div class="mt-1">
-												<dt class="sr-only">Phone number</dt>
-												<dd>{item.phone}</dd>
-											</div>
-										</dl>
-									</div>
-								))
-							}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</Container>
+              <h3 class="text-2xl font-bold my-5">#1. What is Lorem Ipsum?</h3>
+
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+
+              <blockquote
+                class="text-md italic leading-8 my-5 p-5 text-indigo-600 font-semibold"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </blockquote>
+
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
 </Layout>

@@ -49,21 +49,21 @@ and more...`,
 ---
 <div class="relative p-4">
 
-<div class="max-w-screen-xl mx-auto px-6 py-10 dark:bg-gray-800">
-	<div class="mx-auto divide-y divide-gray-300 dark:divide-gray-700">
-		<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">FAQ</h2>
-		<dl class="mt-10 space-y-6 divide-y divide-gray-300 dark:divide-gray-700">
+<div class="max-w-screen-xl mx-auto px-6 py-10 bg-gray-200 rounded-lg">
+	<div class="mx-auto divide-y divide-gray-300 ">
+		<h2 class="text-2xl font-bold leading-10 tracking-tight">FAQ</h2>
+		<dl class="mt-10 space-y-6 divide-y divide-gray-300 ">
 			{
 				faqs.map((faq, index) => (
 					<div class="pt-6" x-data="{ open: false }">
 						<dt>
 							<button
 								type="button"
-								class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+								class="flex w-full items-start justify-between text-left text-gray-900"
 								@click="open = !open"
 								:aria-expanded="open.toString()"
-								:class="{'bg-gray-100 dark:bg-gray-800': open}">
-								<span class="text-base font-semibold leading-7" :class="{'text-indigo-100': open}">{faq.title}</span>
+								:class="{'dark:bg-gray-300': open}">
+								<span class="text-base font-semibold leading-7" :class="{'': open}">{faq.title}</span>
 								<span class="ml-6 flex h-7 items-center">
 									<svg
 										class="h-6 w-6 transform transition-transform"
@@ -87,7 +87,7 @@ and more...`,
 							x-transition:leave-end="opacity-0 transform scale-95"
 							class="mt-2 pr-12"
 							x-show="open">
-							<span class="text-base leading-7 text-gray-600 dark:text-gray-300">
+							<span class="text-base leading-7 text-gray-600">
 								<span set:html={faq.description}></span>
 							</span>
 						</dd>

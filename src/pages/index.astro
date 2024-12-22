@@ -8,31 +8,20 @@ import Newsletter from "@components/newsletter.astro";
 import Testimonials from "@components/testimonials.astro";
 
 import Faq from "@components/faq.astro";
-import { changeLanguage } from "i18next";
-import { t, changeLanguage } from "i18next";
-import { t } from "i18next";
-
-
-changeLanguage("en");
-
-
-
-
-
 
 const faqs = [
-	{
-		title: "How to Download video Tiktok no watermark?",
-		description: `Open Tik Tok app on your phone/or Web on your browser.
+  {
+    title: "How to Download video Tiktok no watermark?",
+    description: `Open Tik Tok app on your phone/or Web on your browser.
 Choose whatever video you want to download.
 Click to the Share button at the right bottom.
 Click the Copy Link button.
 Go back to webname.com and paste your download link to the field above then click to the Download button.
 Wait for our server to do its job and then, save the video to your device.`,
-	},
-	{
-		title: "How to get the TikTok video download link?",
-		description: `Open your TikTok application
+  },
+  {
+    title: "How to get the TikTok video download link?",
+    description: `Open your TikTok application
 Choose the TikTok video that you want to download
 Click Share and at the Share options, find Copy Link button
 Your download URL is ready on the clipboard.
@@ -43,21 +32,86 @@ https://www.tiktok.com/@philandmore/video/6805867805452324102
 or
 https://m.tiktok.com/v/6805867805452324102.html
 and more...`,
-	},
+  },
 ];
 ---
 
-<Layout>
+<Layout
+  title="TikTok Downloader: TikTok Video Download Without Watermark in 5s - TikTokio"
+  description="TikTokio is the fastest free Tiktok downloader online allowing you to download TikTok videos (MP3/MP4) without watermark. Unlimited TikTok downloads. HD quality."
+>
+  <Container>
+    <Hero
+      heading="TikTok Downloader"
+      subheading="TikTok Video Downloader Without Watermark."
+    />
 
+    <div class="content">
+      <div class="relative p-4">
+        <div class="max-w-screen-xl mx-auto">
+          <div
+            class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal"
+          >
+            <div class="">
+              <h2 class="text-gray-900 font-bold text-4xl">
+                Portrait Photography In Early Days
+              </h2>
+              <br />
+              <hr />
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
 
-	<Container>
+              <h3 class="text-2xl font-bold my-5">#1. What is Lorem Ipsum?</h3>
 
-		<Hero heading="TikTok Downloader" subheading="TikTok Video Downloader Without Watermark."/>
-		<Features />
-		<Newsletter />
-		<Testimonials />
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
 
-		<Faq />
-		
-	</Container>
+              <blockquote
+                class="text-md italic leading-8 my-5 p-5 text-indigo-600 font-semibold"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </blockquote>
+
+              <p class="text-base leading-8 my-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Faq />
+  </Container>
 </Layout>
