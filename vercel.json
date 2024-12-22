@@ -1,16 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",          
-      "destination": "/",         
-      "statusCode": 307,          
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-status",
-          "value": "404"          
-        }
-      ]
+      "source": "/404/:path*",
+      "destination": "/:path*"
     }
   ]
 }
