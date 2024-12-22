@@ -1,16 +1,8 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",          
-      "destination": "/",         
-      "statusCode": 307,          
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-status",
-          "value": "404"          
-        }
-      ]
-    }
-  ]
+import type { VercelRequest, VercelResponse } from '@vercel/node';
+ 
+export default function handler(
+  request: VercelRequest,
+  response: VercelResponse,
+) {
+  return response.redirect(404, '/');
 }
