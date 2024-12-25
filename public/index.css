@@ -226,16 +226,3 @@ img {
     line-height: 28px;
     margin: 0 auto;
 }
-.section-instruction__title {
-    border-bottom: 2px solid transparent;
-    -o-border-image: linear-gradient(108deg, rgba(0, 158, 226, .9) -57.13%, #8b2fff 11.08%, rgba(245, 5, 79, .9) 102.57%);
-    border-image: linear-gradient(108deg, rgba(0, 158, 226, .9) -57.13%, #8b2fff 11.08%, rgba(245, 5, 79, .9) 102.57%);
-    border-image-slice: 1;
-    color: var(--color-primary);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 100%;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    text-align: center;
-}
