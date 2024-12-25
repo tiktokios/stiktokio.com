@@ -1,12 +1,8 @@
 {
-  "routes": [
+  "redirects": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/"
-      
-    }
-  ]
+      "source": "/404/:path*",
+      "destination": "/:path*"
+    }
+  ]
 }
