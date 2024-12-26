@@ -9,5 +9,19 @@
       "status": 302
     }
   ]
+
+"headers": [
+    {
+      "src": "/.*",
+      "headers": [
+        {
+          "key": "x-robots-tag",
+          "value": "index, follow"
+        }
+      ]
+    }
+  ]
+
+  
 }
 
