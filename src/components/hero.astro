@@ -122,7 +122,7 @@ const { heading, subheading } = Astro.props;
       <h2 class="text-2xl text-center mb-4 shadow-text msg break-all"></h2>
       <div class="flex flex-wrap justify-center gap-8">
         <div
-          class="gap-8 down-div grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1"
+          class="gap-8 down-div grid lg:grid-cols-1 xl:grid-cols-2 grid-cols-1"
         >
         </div>
       </div>
@@ -357,6 +357,7 @@ const { heading, subheading } = Astro.props;
 
     function showVideoDataOnPage(data) {
       const dnDiv = document.createElement("div");
+      const adDiv = document.createElement("div");
       const dnButtonDiv = document.createElement("div");
       const thumbnail = document.createElement("img");
       dnDiv.className =
@@ -382,6 +383,32 @@ const { heading, subheading } = Astro.props;
 
       downDiv.appendChild(dnDiv);
       dnDiv.appendChild(thumbnail);
+      const adScriptContent = `
+          atOptions = {
+              'key' : '34573b90a095e95e849f42bc513a1ec8',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+          };
+      `;
+
+      // Create a script element for the ad options
+      const optionsScript = document.createElement('script');
+      optionsScript.type = 'text/javascript';
+      optionsScript.textContent = adScriptContent;
+
+      // Create a script element for the external script
+      const externalScript = document.createElement('script');
+      externalScript.type = 'text/javascript';
+      externalScript.src = '//lockupaccede.com/34573b90a095e95e849f42bc513a1ec8/invoke.js';
+
+      // Append the scripts to the ad div
+      adDiv.appendChild(optionsScript);
+      adDiv.appendChild(externalScript);
+
+      // Append the ad div to the parent container
+      dnDiv.appendChild(adDiv);
       dnDiv.appendChild(dnButtonDiv);
 
       for (let format of data.formats) {
